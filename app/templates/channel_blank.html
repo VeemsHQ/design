@@ -1,0 +1,91 @@
+{% extends "base_public.html" %}
+{% block content %}
+<main class="mx-auto col w-100 py-0 middle-col  bg-secondary">
+
+    <div class="row bg-light">
+
+        <div class="w-100 p-0 d-flex flex-column">
+            <img class="channel-banner-full" src="/static/example_channel_banner.jpg" />
+            <div class="container-fluid py-3">
+                <div class="d-lg-flex text-center text-lg-left">
+                    <div>
+                        <img src="https://yt3.ggpht.com/a/AATXAJzPPJ7pCy-DGw3VzYebBzdVknbKuvMgnWwJ_iT7=s88-c-k-c0x00ffffff-no-rj"
+                            class="profile-pic profile-pic-100">
+                    </div>
+                    <div class="w-100 ml-0 ml-lg-3">
+                        <div class="mt-1 mb-2">
+                            <h1 class="h3 mb-0">Timcast</h1>
+                        </div>
+                        <div class="font-weight-normal">
+                            <span class="font-weight-bold">1.06M</span> followers · joined <span data-toggle="tooltip"
+                                data-placement="bottom" title="" data-original-title="06 November 2020 at 10:38:40"
+                                class="font-weight-bold">06
+                                November 2020</span>
+                        </div>
+                        <div class="d-flex mt-2">
+                            <div class="mx-auto mx-lg-0 ml-lg-auto">
+                                <a href="/dash/customise"
+                                    class="btn btn-primary d-block d-sm-inline my-1 my-sm-0">Customise Channel</a>
+                                <a href="/dash/videos" class="btn btn-primary d-block d-sm-inline my-1 my-sm-0">Manage
+                                    Videos</a>
+                                    {% include '_btn_follow.html' %}
+                                <!-- <a href="#"
+
+                                    class="btn btn-outline-primary d-block d-sm-inline my-1 my-sm-0">Follow</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div
+                class="flex-row box-shadow-bottom d-flex justify-content-center justify-content-md-between align-items-center">
+                <ul class="nav settings-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row no-gutters my-md-3">
+        <div class="col">
+            <div class="posts">
+                <div class="row no-gutters">
+                    <div class="col">
+                        <div class="text-center py-3 px-3 my-3">
+                            <span class="fa-stack fa-2x text-muted mb-4">
+                                <i class="fas fa-square text-gray-500 opacity-25 fa-stack-2x"></i>
+                                <i class="fas text-gray-500 fa-ghost fa-stack-1x text-lg"></i>
+                            </span>
+                            <h2 class="h5">Upload a video to get started</h2>
+                            <p class="text-muted mb-md-3">Videos that you upload will show up here.</p>
+                            <div>
+                                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#uploadModal"><i
+                                        class="material-icons align-middle">backup</i> Upload Video</a>
+                            </div>
+                            <div class="mt-5">
+                                <p class="text-muted">Have a YouTube account and would like to bring over your videos to
+                                    Veems?</p>
+                                <a href="#" class="btn btn-secondary"><i class="material-icons align-middle">sync</i>
+                                    Sync YouTube Videos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

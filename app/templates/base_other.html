@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block body %}
+
+<body class="bg-white">
+
+    <div class="container-fluid middle-col-nomargin">
+
+
+        <div class="row">
+            {% include "_top_nav.html" %}
+        </div>
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% block scripts %}
+    {% endblock %}
+</body>
+
+</html>
+
+{% endblock %}

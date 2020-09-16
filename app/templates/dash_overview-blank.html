@@ -1,0 +1,56 @@
+{% extends "base_dash.html" %}
+{% block content %}
+<div class="col col-xl-8">
+    <div class="d-block d-lg-none">
+        <p class="alert alert-secondary">Channel link<br /><a href="#">https://veems.com/c/UCASvHD</a></p>
+    </div>
+    <div>
+        <div class="border rounded p-3">
+            <div class="row no-gutters my-md-3">
+                <div class="col text-center text-muted">
+                    <p><i class="material-icons align-middle text-muted" style="font-size:1000%; opacity: 0.3">add_a_photo</i></p>
+
+                    <h2 class="h3">Let's get started, upload a video</h2>
+
+                    <p class="text-muted">Want to see metrics on your recent video?
+                        Upload and publish a video to get started. </p>
+                    <div class="text-center px-3 my-3">
+                        <div>
+                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#uploadModal"><i
+                                    class="material-icons align-middle">backup</i>
+                                Upload Video</a>
+                                <a href="/dash/videos" class="btn btn-secondary"><i class="material-icons align-middle">sync</i>
+                                    Sync YouTube Videos</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="col d-none d-lg-block">
+    <p class="alert alert-secondary">Channel link<br /><a href="#">https://veems.com/c/UCASvHD</a></p>
+    <div class="border my-3 rounded p-3">
+        <h4>News</h4>
+        <p>No new updates, but check back regularly to see announcements geared specifically for creators.
+            Also take a look at: </p>
+        <p><a href="#"><img src="/static/social-icons/discord.svg" class="social-icon mr-1" /> Veems on Discord</a></p>
+        <p><a href="#"><img src="/static/social-icons/twitter.svg" class="social-icon mr-1" /> Veems on Twitter</a></p>
+    </div>
+    <div class="border my-3 rounded p-3">
+        <h4>Actions</h4>
+        <div><a href="#" class="btn btn-outline-secondary" data-toggle="modal" data-target="#uploadModal"><i
+                    class="material-icons align-middle">backup</i> Upload
+                Video</a>
+        </div>
+        <div><a href="#" class="mt-2 btn btn-outline-secondary"><i class="material-icons align-middle">sync</i>
+                Sync
+                YouTube
+                Videos</a></div>
+        <div><a href="#" class="mt-2 btn btn-outline-secondary"><i class="material-icons align-middle">add_circle_outline</i> Create Channel</a></div>
+    </div>
+</div>
+{% endblock %}

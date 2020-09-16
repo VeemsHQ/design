@@ -1,0 +1,38 @@
+{% extends "base_dash.html" %}
+{% block content %}
+<div class="col">
+
+    <div class="d-flex align-items-center">
+        <h2 class="h5 ">Sync Status</h2>
+        <a href="#" data-toggle="modal" data-target="#createSyncModal" class="btn btn-primary ml-auto">Add YouTube Channel</a>
+    </div>
+    <table class="table mt-4">
+        <thead>
+            <tr class="text-muted">
+                <th scope="col">YouTube Channel</th>
+                <th scope="col">Veems Channel</th>
+                <th scope="col">Subscribers</th>
+                <th scope="col">Videos</th>
+                <th scope="col">Synced Videos</th>
+                <th scope="col">Status</th>
+                <th scope="col">Last Sync</th>
+            </tr>
+        </thead>
+        {% raw %}
+        <tbody class="channel-videos"
+            data-spreadsheet-api="https://sheet2api.com/v1/CMMyLxNrQj_b/veems-homepage/Syncs?limit=2">
+            <tr>
+                <td><a href="#">{{veems_channel_name}}</a></td>
+                <td><a href="#">{{channel_name}}</a></td>
+                <td>{{subscribers}}</td>
+                <td>{{videos}}</td>
+                <td>{{videos_synced}}</td>
+                <td><i class="small material-icons align-middle {{status_class}}">{{status}}</i></td>
+                <td>{{last_sync}}</td>
+            </tr>
+        </tbody>
+        {% endraw %}
+    </table>
+</div>
+
+{% endblock %}

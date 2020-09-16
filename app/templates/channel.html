@@ -1,0 +1,95 @@
+{% extends "base_public.html" %}
+{% block content %}
+<main class="mx-auto col w-100 py-0 middle-col  bg-secondary">
+
+    <div class="row bg-light">
+
+        <div class="w-100 p-0 d-flex flex-column">
+            <img class="channel-banner-full" src="/static/example_channel_banner.jpg" />
+            <div class="container-fluid py-3">
+                <div class="d-lg-flex text-center text-lg-left">
+                    <div>
+                        <img src="https://yt3.ggpht.com/a/AATXAJzPPJ7pCy-DGw3VzYebBzdVknbKuvMgnWwJ_iT7=s88-c-k-c0x00ffffff-no-rj"
+                            class="profile-pic profile-pic-100">
+                    </div>
+                    <div class="w-100 ml-0 ml-lg-3">
+                        <div class="mt-1 mb-2">
+                            <h1 class="h3 mb-0">Timcast</h1>
+                        </div>
+                        <div class="font-weight-normal">
+                            <span class="font-weight-bold">1.06M</span> followers · joined <span data-toggle="tooltip"
+                                data-placement="bottom" title="" data-original-title="06 November 2020 at 10:38:40"
+                                class="font-weight-bold">06
+                                November 2020</span>
+                        </div>
+                        <div class="d-flex mt-2">
+                            <div class="mx-auto mx-lg-0 ml-lg-auto">
+                                <a href="/dash/customise"
+                                    class="btn btn-primary d-block d-sm-inline my-1 my-sm-0">Customise Channel</a>
+                                <a href="/dash/videos" class="btn btn-primary d-block d-sm-inline my-1 my-sm-0">Manage
+                                    Videos</a>
+                                    {% include '_btn_follow.html' %}
+                                <!-- <a href="#"
+
+                                    class="btn btn-outline-primary d-block d-sm-inline my-1 my-sm-0">Follow</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div
+                class="flex-row box-shadow-bottom d-flex justify-content-center justify-content-md-between align-items-center">
+                <ul class="nav settings-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row no-gutters my-md-3">
+        <div class="col">
+            <div class="posts">
+                <div class="row no-gutters">
+                    <div class="col">
+                        {% raw %}
+                        <div class="video-grid px-2 m-0 card-group d-flex flex-wrap"
+                            data-spreadsheet-api="https://sheet2api.com/v1/CMMyLxNrQj_b/veems-homepage/Sheet1?limit=12">
+                            <div class="card mt-1">
+                                <a href="/video" class="thumbnail">
+                                    <img class="card-img-top" src="{{video_thumb_url}}">
+                                    <div class="overlays">{{video_duration}}</div>
+                                </a>
+                                <div class="card-body pl-0 pt-2 pr-3 pb-3">
+                                    <h5 style="font-size:0.9rem" class="m-0"><a href="#">{{video_title}}</a></h5>
+                                    <div class="metadata">
+                                        <div class="w-100">
+                                            <div class="card-text text-muted mt-1"><a href="#">{{channel_name}}</a></div>
+                                        </div>
+                                        <div class="w-100">
+                                            <div class="card-text text-muted">2M views • {{posted_on}} ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endraw %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
