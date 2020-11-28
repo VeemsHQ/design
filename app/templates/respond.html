@@ -1,0 +1,88 @@
+{% extends "base_public.html" %}
+{% block content %}
+<main class="mx-auto col d-block w-100 p-0 middle-col justify-content-between bg-secondary">
+    <div class="row w-100 bg-light p-3">
+
+        <div class="col-12">
+
+            <h1 class="h3">You're posting a video response to:</h1>
+            <div class="d-flex align-items-center justdify-content-center">
+                <div class="thumbnail-small mr-2">
+                    <img class="img-fluid"
+                        src="https://i.ytimg.com/vi/pJkgymyv0_s/hq720.jpg?sqp=-oaymwEZCNAFEJQDSFXyq4qpAwsIARUAAIhCGAFwAQ==&amp;rs=AOn4CLCfMf5cCfG3GSPEB1LkYOuXFvgkOw">
+                </div>
+                <a href="/video">
+                    <h2 class="h4">Marathon Day Is Here | How ToBe Behzinga</h2>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="row w-100 p-3">
+        <div class="col-12 col-lg-8">
+            <div
+                class="flex-row box-shadow-bottom d-flex justify-content-center justify-content-md-between align-items-center">
+                <ul class="nav settings-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Choose a video</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Upload a video</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="border mt-3 rounded bg-white">
+                <div class="row">
+                    <div class="col">
+                        <form>
+                            <div class="p-3">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Response Video</label>
+
+                                    <select class="js-example-basic-single custom-select w-100" id="exampleFormControlInput1"
+                                        name="state"
+                                        data-spreadsheet-api="https://sheet2api.com/v1/CMMyLxNrQj_b/veems-homepage/Sheet1?limit=4">
+                                        <option>Select a video to respond with</option>
+                                        {% raw %}
+                                        <option value="{{video_title}}">{{video_title}}</option>
+                                        {% endraw %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="footer bg-secondary p-3">
+                                <div class="d-flex">
+                                    <input class="btn btn-primary ml-auto" type="submit" value="Respond">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 py-3 px-0 mt-2">
+            <div class="px-0 mx-3 mb-3 w-100">
+                <h6 class="d-flex align-items-center">What is a video response?</h6>
+                <p>Ever wanted to talk back to a video?<br />Now's your chance — you can upload a response to this video
+                    and
+                    we will link them together.</p>
+
+                <h6 class="d-flex align-items-center">How do I post video response?</h6>
+                <p>You can either choose from the videos you already have, or create and upload a new video. Select the
+                    option on the left that best suits your needs.</p>
+
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $(document).ready(function () {
+        $('.js-example-basic-single').select2({
+            theme: 'bootstrap4',
+        });
+    });
+</script>
+{% endblock %}

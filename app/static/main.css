@@ -325,6 +325,11 @@ body {
     width: 168px;
 }
 
+.thumbnail-small {
+    height: 47px;
+    width: 84px;
+}
+
 .video-grid-side .metadata-container {
     width: 160px;
     height: 94px;

@@ -14,6 +14,11 @@ def video():
     return render_template('video.html')
 
 
+@app.route('/respond')
+def respond():
+    return render_template('respond.html')
+
+
 @app.route('/dash/videos')
 def upload():
     context = {
