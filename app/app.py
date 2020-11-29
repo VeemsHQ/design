@@ -19,6 +19,16 @@ def respond():
     return render_template('respond.html')
 
 
+@app.route('/respond/upload')
+def respond_upload():
+    return render_template('respond_upload.html')
+
+
+@app.route('/respond/done')
+def respond_done():
+    return render_template('respond_done.html')
+
+
 @app.route('/dash/videos')
 def upload():
     context = {
