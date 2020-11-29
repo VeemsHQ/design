@@ -1,33 +1,35 @@
 {% extends "base_public.html" %}
 {% block content %}
 <main class="mx-auto col d-block w-100 p-0 middle-col justify-content-between bg-secondary">
-    <div class="row w-100 bg-light p-3">
+    <div>
+        <div class="row w-100 bg-light m-0 p-3">
 
-        <div class="col-12">
+            <div class="col-12">
 
-            <h1 class="h3">You're posting a video response to:</h1>
-            <div class="d-flex align-items-center justdify-content-center">
-                <div class="thumbnail-small mr-2">
-                    <img class="img-fluid"
-                        src="https://i.ytimg.com/vi/pJkgymyv0_s/hq720.jpg?sqp=-oaymwEZCNAFEJQDSFXyq4qpAwsIARUAAIhCGAFwAQ==&amp;rs=AOn4CLCfMf5cCfG3GSPEB1LkYOuXFvgkOw">
+                <h1 class="h3">You're posting a video response to:</h1>
+                <div class="d-flex align-items-center">
+                    <div class="thumbnail-small mr-2">
+                        <a href="/video"><img class="img-fluid"
+                                src="https://i.ytimg.com/vi/pJkgymyv0_s/hq720.jpg?sqp=-oaymwEZCNAFEJQDSFXyq4qpAwsIARUAAIhCGAFwAQ==&amp;rs=AOn4CLCfMf5cCfG3GSPEB1LkYOuXFvgkOw" /></a>
+                    </div>
+                    <a href="/video">
+                        <h2 class="h4 text-truncate">Marathon Day Is Here | How ToBe Behzinga</h2>
+                    </a>
                 </div>
-                <a href="/video">
-                    <h2 class="h4">Marathon Day Is Here | How ToBe Behzinga</h2>
-                </a>
             </div>
-        </div>
 
+        </div>
     </div>
-    <div class="row w-100 p-3">
-        <div class="col-12 col-lg-8">
+    <div class="row w-100 p-3 m-0">
+        <div class="col-12 col-lg-8 p-0">
             <div
                 class="flex-row box-shadow-bottom d-flex justify-content-center justify-content-md-between align-items-center">
                 <ul class="nav settings-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Choose a video</a>
+                        <a class="nav-link active" href="#">Choose an existing video</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Upload a video</a>
+                        <a class="nav-link" href="#">Upload a new video</a>
                     </li>
                 </ul>
             </div>
@@ -37,13 +39,15 @@
                     <div class="col">
                         <form>
                             <div class="p-3">
+                                <p class="text-muted">* Indicates the video has already been used for another video response.<br/>
+                                    Selecting a video marked as already having been used will remove the old link.</p>
                                 <div class="form-group">
-                                    <label for="exampleFormControlInput1">Response Video</label>
+                                    <label for="exampleFormControlInput1">Select the video you want to respond with:</label>
 
-                                    <select class="js-example-basic-single custom-select w-100" id="exampleFormControlInput1"
-                                        name="state"
+                                    <select class="js-example-basic-single custom-select w-100"
+                                        id="exampleFormControlInput1" name="state"
                                         data-spreadsheet-api="https://sheet2api.com/v1/CMMyLxNrQj_b/veems-homepage/Sheet1?limit=4">
-                                        <option>Select a video to respond with</option>
+                                        <option>--</option>
                                         {% raw %}
                                         <option value="{{video_title}}">{{video_title}}</option>
                                         {% endraw %}
@@ -60,14 +64,15 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-lg-4 py-3 px-0 mt-2">
-            <div class="px-0 mx-3 mb-3 w-100">
-                <h6 class="d-flex align-items-center">What is a video response?</h6>
+        <div class="col-12 col-lg-4">
+            <div class="pt-3">
+                <h6 class="d-flex align-items-center border-bottom pb-2">What is a video response?</h6>
                 <p>Ever wanted to talk back to a video?<br />Now's your chance — you can upload a response to this video
                     and
                     we will link them together.</p>
-
-                <h6 class="d-flex align-items-center">How do I post video response?</h6>
+            </div>
+            <div class="pt-3">
+                <h6 class="d-flex align-items-center border-bottom pb-2">How do I post video response?</h6>
                 <p>You can either choose from the videos you already have, or create and upload a new video. Select the
                     option on the left that best suits your needs.</p>
 

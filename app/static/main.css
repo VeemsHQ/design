@@ -325,6 +325,11 @@ body {
     width: 168px;
 }
 
+.select2-container {
+    width: 100% !important;
+  }
+
+
 .thumbnail-small {
     height: 47px;
     width: 84px;
